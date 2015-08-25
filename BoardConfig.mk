@@ -32,7 +32,7 @@ TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 TARGET_NO_BOOTLOADER := true
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M androidboot.bootdevice=7824900.sdhci utags.blkdev=/dev/block/bootdevice/by-name/utags utags.backup=/dev/block/bootdevice/by-name/utagsBackup movablecore=160M androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M androidboot.bootdevice=soc.0 utags.blkdev=/dev/block/platform/soc.0/by-name/utags utags.backup=/dev/block/platform/soc.0/by-name/utagsBackup movablecore=160M androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -43,6 +43,7 @@ TARGET_KERNEL_CONFIG := msm8916-minilux_defconfig
 
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
+TARGET_USES_MOTOROLA_LOG := true
 
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -62,11 +63,14 @@ RECOVERY_SDCARD_ON_DATA := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
+TW_INCLUDE_CRYPTO := true
+
 # TWRP
 TW_THEME := portrait_hdpi
 TW_TARGET_USES_QCOM_BSP := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_INCLUDE_CRYPTO := true
 TW_SCREEN_BLANK_ON_BOOT := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
