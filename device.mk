@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
@@ -96,6 +97,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8916 \
     copybit.msm8916 \
     hwcomposer.msm8916 \
+    libtinyxml \
     memtrack.msm8916
 
 # CMActions
@@ -217,6 +219,7 @@ PRODUCT_PACKAGES += \
 	init.qcom.sh \
 	init.target.rc \
 	init.qcom.class_core.sh \
+	init.class_main.sh \
 	init.qcom.early_boot.sh \
     ueventd.qcom.rc \
 	qee.dat \

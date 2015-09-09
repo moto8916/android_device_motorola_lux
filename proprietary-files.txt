@@ -839,3 +839,13 @@ vendor/lib/libmmcamera_ov5648_oty5f03.so
 vendor/lib/libwvm.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_imglib.so
+
+vendor/lib/libqmi_client_helper.so
+
+bin/rmnetcli
+bin/perfd
+
+lib/libloc_core.so
+lib/libloc_eng.so
+
+lib/librmnetctl.so

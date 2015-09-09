@@ -25,14 +25,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.debug.wfd.enable=0 \
 	persist.debug.coresight.config=stm-events \
 	audio.dolby.ds2.enabled=true
-	
-PRODUCT_PROPERTY_OVERRIDES += \	
+
+PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sys.fw.use_trim_settings=true \
 	ro.sys.fw.empty_app_percent=50 \
 	ro.sys.fw.trim_empty_percent=100 \
 	ro.sys.fw.trim_cache_percent=100 \
 	ro.sys.fw.trim_enable_memory=1073741824
-	
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.calfile0=/etc/acdbdata/Bluetooth_cal.acdb \
@@ -148,7 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	mmp.enable.3g2=true \
 	media.aac_51_output_enabled=true \
 	mm.enable.qcom_parser=3314291 \
-	media.stagefright.use-awesome=false \
+	media.stagefright.use-awesome=false 
 	
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \

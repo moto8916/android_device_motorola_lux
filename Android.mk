@@ -19,6 +19,18 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+CMN_IMAGES := \
+    cmnlib.b00 cmnlib.b01 cmnlib.b02 cmnlib.b03 cmnlib.mdt
+
+CMN_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(CMN_IMAGES)))
+$(CMN_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "CMN firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(CMN_SYMLINKS)
+
 FIRMWARE_KEYMASTER_IMAGES := \
     keymaster.b00 keymaster.b01 keymaster.b02 keymaster.b03 keymaster.mdt
 
@@ -57,6 +69,18 @@ $(FIRMWARE_MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MODEM_SYMLINKS)
+
+PROV_IMAGES := \
+    prov.b00 prov.b01 prov.b02 prov.b03 prov.mdt
+
+PROV_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(PROV_IMAGES)))
+$(PROV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Playready firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(PROV_SYMLINKS)
 
 FIRMWARE_WCNSS_IMAGES := \
     wcnss.b00 wcnss.b01 wcnss.b02 wcnss.b04 \
