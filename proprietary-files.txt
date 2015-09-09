@@ -849,3 +849,13 @@ lib/libloc_core.so
 lib/libloc_eng.so
 
 lib/librmnetctl.so
+
+bin/adspd
+bin/loc_launcher
+bin/ssr_setup
+bin/mm-pp-daemon
+
+lib/libAisAdapter.so
+lib/libAlAisLib.so
+lib/libAlAisTune.so
+lib/libAlAisWrap.so
