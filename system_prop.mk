@@ -158,7 +158,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpt=0x2ec1 \
     ro.usb.bpt_adb=0x2ec5 \
     ro.usb.bpteth=0x2ec3 \
-    ro.usb.bpteth_adb=0x2ec6
+    ro.usb.bpteth_adb=0x2ec6 \
+    persist.fuse_sdcard=false \
+    persist.esdfs_sdcard=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \

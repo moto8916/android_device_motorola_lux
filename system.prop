@@ -151,3 +151,5 @@ ro.usb.bpt=2ec1
 ro.usb.bpt_adb=2ec5
 ro.usb.bpteth=2ec3
 ro.usb.bpteth_adb=2ec6
+persist.fuse_sdcard=false
+persist.esdfs_sdcard=true
