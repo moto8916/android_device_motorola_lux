@@ -155,10 +155,9 @@ PRODUCT_COPY_FILES += \
 	
 # NFC
 PRODUCT_PACKAGES += \
-    nfc.msm8916 \
-    libnfc \
+    nfc_nci.bcm2079x \
     libnfc_ndef \
-    libnfc_jni \
+    libnfc-nci \
     Nfc \
     Tag \
     com.android.nfc_extras	
@@ -256,14 +255,18 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     tcpdump \
     wcnss_service
-	
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480	
-	
+    ro.sf.lcd_density=480
+
 # IRQ balance
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf	
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8916/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     kernel/motorola/msm8916/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+
+PRODUCT_COPY_FILES += \
+    device/motorola/lux/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/motorola/lux/configs/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf
