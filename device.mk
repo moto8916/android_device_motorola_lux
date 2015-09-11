@@ -112,7 +112,8 @@ PRODUCT_PACKAGES += \
 
 # Filesystem
 PRODUCT_PACKAGES += \
-    setup_fs
+     e2fsck \
+     make_ext4fs
 
 # FM
 PRODUCT_PACKAGES += \
