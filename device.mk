@@ -270,3 +270,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/lux/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     device/motorola/lux/configs/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf
+
+# Input configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/configs/keylayout/msm8939-florida-snd-card_Button_Jack.kl:system/usr/keylayout/msm8939-florida-snd-card_Button_Jack.kl \
+    $(LOCAL_PATH)/configs/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    $(LOCAL_PATH)/configs/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl \
