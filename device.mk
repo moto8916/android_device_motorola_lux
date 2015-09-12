@@ -34,7 +34,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-	$(LOCAL_PATH)/audio/mixer_paths_florida.xml:system/etc/mixer_paths_florida.xml
+    $(LOCAL_PATH)/audio/mixer_paths_florida.xml:system/etc/mixer_paths_florida.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -144,23 +144,24 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/configs/media_codecs_8929.xml:system/etc/media_codecs_8929.xml \
-	$(LOCAL_PATH)/configs/media_codecs_8939.xml:system/etc/media_codecs_8939.xml \
+    $(LOCAL_PATH)/configs/media_codecs_8929.xml:system/etc/media_codecs_8929.xml \
+    $(LOCAL_PATH)/configs/media_codecs_8939.xml:system/etc/media_codecs_8939.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-	
+
 NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access.xml
 
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml	
-	
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+
 # NFC
 PRODUCT_PACKAGES += \
-    nfc_nci.bcm2079x \
+    nfc_nci.bcm2079x.msm8916 \
     libnfc_ndef \
     libnfc-nci \
-    Nfc \
+    libnfc_nci_jni \
+    NfcNci \
     Tag \
-    com.android.nfc_extras	
+    com.android.nfc_extras
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -192,39 +193,39 @@ PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
     init.qcom.ril.sh \
     stml0xx_wrapper.sh \
-	hsic.control.bt.sh \
-	init.ath3k.bt.sh \
-	init.crda.sh \
-	init.qcom.audio.sh \
-	init.qcom.coex.sh \
-	init.qcom.fm.sh \
-	init.qcom.modem_links.sh \
-	init.qcom.post_boot.sh \
-	init.qcom.sdio.sh \
-	init.qcom.wifi.sh
+    hsic.control.bt.sh \
+    init.ath3k.bt.sh \
+    init.crda.sh \
+    init.qcom.audio.sh \
+    init.qcom.coex.sh \
+    init.qcom.fm.sh \
+    init.qcom.modem_links.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.wifi.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-	init.mmi.block_perm.sh \
+    init.mmi.block_perm.sh \
     init.mmi.boot.sh \
     init.mmi.dtv.sh \
     init.mmi.early_boot.sh \
-	init.mmi.overlay.rc \
+    init.mmi.overlay.rc \
     init.mmi.touch.sh \
-	init.mmi.rc \
+    init.mmi.rc \
     init.mmi.usb.rc \
     init.mmi.usb.sh \
-	init.qcom.bms.sh \
+    init.qcom.bms.sh \
     init.qcom.rc \
-	init.qcom.sh \
-	init.target.rc \
-	init.qcom.class_core.sh \
-	init.class_main.sh \
-	init.qcom.early_boot.sh \
+    init.qcom.sh \
+    init.target.rc \
+    init.qcom.class_core.sh \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
     ueventd.qcom.rc \
-	qee.dat \
-	qe \
-	qem.dat
+    qee.dat \
+    qe \
+    qem.dat
 
 # Thermal
 PRODUCT_COPY_FILES += \
