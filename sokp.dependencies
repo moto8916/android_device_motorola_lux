@@ -1,13 +1,13 @@
 [
   {
     "remote":      "github",
-    "repository":  "MotoG3/android_kernel_motorola_msm8916",
+    "repository":  "boulzordev/android_kernel_motorola_msm8916",
     "target_path": "kernel/motorola/msm8916"
   },
   {
     "remote":      "github",
-    "repository":  "MotoG3/android_vendor_motorola_osprey",
-    "target_path": "vendor/motorola/osprey"
+    "repository":  "boulzordev/android_vendor_motorola_lux",
+    "target_path": "vendor/motorola/lux"
   },
   {
     "repository": "android_external_mm-dash",
