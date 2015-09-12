@@ -88,11 +88,6 @@ ril.subscription.types=NV,RUIM
 # OTG
 persist.sys.isUsbOtgEnabled=1
 
-# perf
-ro.cpu0.cpu_max_freq=10485760
-ro.cpu4.cpu_max_freq=10485760
-ro.vendor.extension_library=libqti-perfd-client.so
-
 # Radio
 persist.radio.apm_sim_not_pwdn=1
 rild.libargs=-d /dev/smd0
