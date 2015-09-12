@@ -854,6 +854,7 @@ bin/adspd
 bin/loc_launcher
 bin/ssr_setup
 bin/mm-pp-daemon
+bin/mm-qcamera-app
 
 lib/libAisAdapter.so
 lib/libAlAisLib.so

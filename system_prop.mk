@@ -89,13 +89,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gps.agps_provider=1 \
     ro.qc.sdk.izat.premium_enabled=1 \
     ro.qc.sdk.izat.service_mask=0x5 \
-    persist.gps.qc_nlp_in_use=1 \
+    persist.gps.qc_nlp_in_use=0 \
     persist.loc.nlp_name=com.qualcomm.services.location \
     persist.mot.gps.smart_battery=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.narrow.searchrange=1
+
+#NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    nfc.bcm2079x.isSecure=1
 
 # NITZ
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -124,7 +128,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
     persist.radio.oem_ind_to_both=false \
     persist.radio.relay_oprt_change=1 \
-    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so \
+    ro.telephony.default_network=9 \
+    ro.persist.qcapb=0 \
+    ro.pip.gated=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true \
@@ -134,21 +141,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true
 
-#system props for the MM modules
-PRODUCT_PROPERTY_OVERRIDES += \
-	media.stagefright.enable-player=true \
-	media.stagefright.enable-http=true \
-	media.stagefright.enable-aac=true \
-	media.stagefright.enable-qcp=true \
-	media.stagefright.enable-fma2dp=true \
-	media.stagefright.enable-scan=true \
-	media.msm8939hw=0 \
-	media.msm8929hw=0 \
-	mmp.enable.3g2=true \
-	media.aac_51_output_enabled=true \
-	mm.enable.qcom_parser=3314291 \
-	media.stagefright.use-awesome=false 
-	
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.mtp=0x2e82 \
@@ -158,9 +150,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpt=0x2ec1 \
     ro.usb.bpt_adb=0x2ec5 \
     ro.usb.bpteth=0x2ec3 \
-    ro.usb.bpteth_adb=0x2ec6 \
-    persist.fuse_sdcard=false \
-    persist.esdfs_sdcard=true
+    ro.usb.bpteth_adb=0x2ec6
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -69,19 +69,8 @@ mm.disable.sec_smoothstreaming=true
 media.aac_51_output_enabled=true
 drm.service.enabled=1
 
-#system props for the MM modules
-media.stagefright.enable-player=true
-media.stagefright.enable-http=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-scan=true
-media.msm8939hw=0
-media.msm8929hw=0
-mmp.enable.3g2=true
-media.aac_51_output_enabled=true
-#codecs: DivX DivXHD AVI AC3 ASF AAC QCP DTS 3G2 MP2TS FLAC
-mm.enable.qcom_parser=3314291
+#NFC
+nfc.bcm2079x.isSecure=1
 
 # NITZ
 persist.rild.nitz_plmn=
@@ -131,6 +120,9 @@ DEVICE_PROVISIONED=1
 persist.radio.mcfg_enabled=1
 persist.radio.multi_mbns=nz2deg.mbn;apac_default.mbn
 ro.fsg-id=emea_dsds
+ro.telephony.default_network=9
+ro.persist.qcapb=0
+ro.pip.gated=0
 
 # Time
 persist.timed.enable=true
@@ -151,5 +143,3 @@ ro.usb.bpt=2ec1
 ro.usb.bpt_adb=2ec5
 ro.usb.bpteth=2ec3
 ro.usb.bpteth_adb=2ec6
-persist.fuse_sdcard=false
-persist.esdfs_sdcard=true
