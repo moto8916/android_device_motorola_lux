@@ -156,14 +156,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.qc.sub.rdump.on=1 \
     persist.sys.ssr.restart_level=ALL_ENABLE
-	
+
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.radio.mcfg_enabled=1 \
-	persist.radio.multi_mbns=nz2deg.mbn;apac_default.mbn \
-	ro.fsg-id=emea_dsds \
-	persist.radio.plmn_name_cmp=1 \
-	persist.radio.process_sups_ind=0 \
-	persist.camera.video.hdr=record \
-	ro.cpu0.cpu_max_freq=10485760 \
-	ro.cpu4.cpu_max_freq=10485760 \
-	ro.frp.pst=/dev/block/bootdevice/by-name/frp
+    persist.radio.mcfg_enabled=1 \
+    persist.radio.multi_mbns=nz2deg.mbn;apac_default.mbn \
+    ro.fsg-id=emea_dsds \
+    persist.radio.plmn_name_cmp=1 \
+    persist.radio.process_sups_ind=0 \
+    persist.camera.video.hdr=record \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
