@@ -124,7 +124,12 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8916
+    gps.default \
+    gps.msm8916 \
+    libloc_adapter \
+    libgps.utils \
+    libloc_eng \
+    libloc_api_v02
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -186,6 +191,7 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
+    power.qcom \
     power.msm8916
 
 # Ramdisk
