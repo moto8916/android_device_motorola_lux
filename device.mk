@@ -228,10 +228,7 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core.sh \
     init.class_main.sh \
     init.qcom.early_boot.sh \
-    ueventd.qcom.rc \
-    qee.dat \
-    qe \
-    qem.dat
+    ueventd.qcom.rc
 
 # Thermal
 PRODUCT_COPY_FILES += \
