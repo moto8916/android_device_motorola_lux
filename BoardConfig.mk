@@ -55,9 +55,8 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8916
 TARGET_KERNEL_CONFIG := msm8916-lux_defconfig
 
-# Use external Linaro 4.9.3 compiler instead of default GCC 4.8
-# The default GCC throws false positive warnings on my Prima drivers, preventing compilation
-KERNEL_TOOLCHAIN_PREFIX := arm-linux-gnueabihf-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
