@@ -60,6 +60,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     if (ISMATCH(sku, "XT1562") || ISMATCH(radio, "0x4")) {
         setMsim();
+        property_set("ro.product.model", "XT1562");
         property_set("ro.product.name", "lux_retasia_ds");
         property_set("ro.product.device", "lux_uds");
         property_set("ro.build.description", "lux_retasia_ds-user 5.1.1 LPD23.118-10 14 release-keys");
@@ -73,6 +74,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.plmn_name_cmp", "1");
     }
     else if (ISMATCH(sku, "XT1563") || ISMATCH(radio, "0x8")) {
+        property_set("ro.product.model", "XT1563");
         property_set("ro.product.name", "lux_retca");
         property_set("ro.product.device", "lux");
         property_set("ro.build.description", "lux_retca-user 5.1.1 LPD23.118-10 19 release-keys");
