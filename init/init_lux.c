@@ -42,6 +42,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     char platform[PROP_VALUE_MAX];
     char radio[PROP_VALUE_MAX];
     char sku[PROP_VALUE_MAX];
+    char carrier[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
     FILE *fp;
@@ -57,8 +58,24 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.boot.radio", radio);
     property_get("ro.boot.hardware.sku", sku);
+    property_get("ro.boot.carrier", carrier);
 
-    if (ISMATCH(sku, "XT1562") || ISMATCH(radio, "0x4")) {
+    if (ISMATCH(carrier, "retgb")) {
+        // The UK model is a special case
+        // It's a single sim XT1562
+        property_set("ro.product.model", "XT1562");
+        property_set("ro.product.name", "lux_reteu");
+        property_set("ro.product.device", "lux");
+        property_set("ro.build.description", "lux_reteu-user 5.1.1 LPD23.118-10 15 release-keys");
+        property_set("ro.build.fingerprint", "motorola/lux_reteu/lux:5.1.1/LPD23.118-10/15:user/release-keys");
+        property_set("ro.build.product", "lux");
+        property_set("ro.mot.build.customerid", "reteu");
+        property_set("ro.gsm.data_retry_config", "");
+        property_set("persist.radio.mot_ecc_custid", "emea");
+        property_set("persist.radio.mot_ecc_enabled", "1");
+        property_set("persist.radio.process_sups_ind", "0");
+    }
+    else if (ISMATCH(sku, "XT1562") || ISMATCH(radio, "0x4")) {
         setMsim();
         property_set("ro.product.model", "XT1562");
         property_set("ro.product.name", "lux_retasia_ds");
