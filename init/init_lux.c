@@ -60,8 +60,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_get("ro.boot.hardware.sku", sku);
     property_get("ro.boot.carrier", carrier);
 
-    if (ISMATCH(carrier, "retgb")) {
-        // The UK model is a special case
+    if (ISMATCH(carrier, "retgb") || ISMATCH(carrier, "reteu")) {
+        // The reteu model is a special case
         // It's a single sim XT1562
         property_set("ro.product.model", "XT1562");
         property_set("ro.product.name", "lux_reteu");
