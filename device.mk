@@ -121,12 +121,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.default \
-    gps.msm8916 \
-    libloc_adapter \
-    libgps.utils \
-    libloc_eng \
-    libloc_api_v02
+    gps.msm8916
 
 # IRSC
 PRODUCT_COPY_FILES += \
