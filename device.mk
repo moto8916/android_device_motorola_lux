@@ -192,36 +192,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
     init.qcom.ril.sh \
-    stml0xx_wrapper.sh \
-    hsic.control.bt.sh \
-    init.ath3k.bt.sh \
-    init.crda.sh \
-    init.qcom.audio.sh \
-    init.qcom.coex.sh \
-    init.qcom.fm.sh \
-    init.qcom.modem_links.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.wifi.sh
+    stml0xx_wrapper.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.mmi.block_perm.sh \
     init.mmi.boot.sh \
     init.mmi.dtv.sh \
     init.mmi.early_boot.sh \
-    init.mmi.overlay.rc \
     init.mmi.touch.sh \
-    init.mmi.rc \
     init.mmi.usb.rc \
     init.mmi.usb.sh \
-    init.qcom.bms.sh \
     init.qcom.rc \
-    init.qcom.sh \
-    init.target.rc \
-    init.qcom.class_core.sh \
-    init.class_main.sh \
-    init.qcom.early_boot.sh \
     ueventd.qcom.rc
 
 # Thermal
