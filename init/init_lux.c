@@ -61,8 +61,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_get("ro.boot.carrier", carrier);
 
     if (ISMATCH(carrier, "retgb") || ISMATCH(carrier, "reteu")) {
-        // The reteu model is a special case
-        // It's a single sim XT1562
+        // These are single SIM XT1562 devices
         property_set("ro.product.model", "XT1562");
         property_set("ro.product.name", "lux_reteu");
         property_set("ro.product.device", "lux");
@@ -88,6 +87,21 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.mot_ecc_custid", "emea");
         property_set("persist.radio.mot_ecc_enabled", "1");
         property_set("persist.radio.process_sups_ind", "0");
+        property_set("persist.radio.plmn_name_cmp", "1");
+    }
+    else if (ISMATCH(carrier, "retbr")) {
+        // These are dual SIM XT1563 devices
+        setMsim();
+        property_set("ro.product.model", "XT1563");
+        property_set("ro.product.name", "lux_retla_ds");
+        property_set("ro.product.device", "lux_uds");
+        property_set("ro.build.description", "lux_retla_ds-user 5.1.1 LPD23.118-6.1 2 release-keys");
+        property_set("ro.build.fingerprint", "motorola/lux_retla_ds/lux_uds:5.1.1/LPD23.118-6.1/2:user/release-keys");
+        property_set("ro.build.product", "lux_uds");
+        property_set("ro.mot.build.customerid", "retla");
+        property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
+        property_set("persist.radio.mot_ecc_enabled", "1");
+        property_set("persist.radio.process_sups_ind", "1");
         property_set("persist.radio.plmn_name_cmp", "1");
     }
     else if (ISMATCH(sku, "XT1563") || ISMATCH(radio, "0x8")) {
