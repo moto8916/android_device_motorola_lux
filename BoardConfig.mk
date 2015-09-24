@@ -19,8 +19,6 @@ LOCAL_PATH := device/motorola/lux
 
 BOARD_VENDOR := motorola-qcom
 
-TARGET_CYANOGEN_COMMON := msm8939
-
 TARGET_SPECIFIC_HEADER_PATH := device/motorola/lux/include
 
 # Platform
