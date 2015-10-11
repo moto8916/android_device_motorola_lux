@@ -102,6 +102,7 @@ framework/qcnvitems.jar
 framework/qcrilhook.jar
 lib/hw/audio.primary.msm8916.so
 lib/hw/camera.msm8916.so
+lib/hw/gps.default.so
 lib/hw/nfc_nci.bcm2079x.default.so
 lib/hw/sensorhub.msm8916.so
 lib/hw/sensors.msm8916.so
