@@ -89,7 +89,6 @@ etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 etc/firmware/vrgain.bin
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-etc/gps.conf
 etc/izat.conf
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/qcnvitems.xml
