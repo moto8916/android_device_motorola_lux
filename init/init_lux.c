@@ -62,7 +62,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     property_get("ro.boot.hardware.sku", sku);
     property_get("ro.boot.carrier", carrier);
 
-    if (ISMATCH(carrier, "retgb") || ISMATCH(carrier, "reteu") || ISMATCH(carrier, "vfau")) {
+    if (ISMATCH(carrier, "retgb") || ISMATCH(carrier, "reteu") || ISMATCH(carrier, "retde")
+            || ISMATCH(carrier, "vfau")) {
         // These are single SIM XT1562 devices
         property_set("ro.product.model", "XT1562");
         property_set("ro.product.name", "lux_reteu");
@@ -91,7 +92,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.process_sups_ind", "0");
         property_set("persist.radio.plmn_name_cmp", "1");
     }
-    else if (ISMATCH(carrier, "retbr") || ISMATCH(carrier, "retla") || ISMATCH(carrier, "tefbr") || ISMATCH(carrier, "timbr")) {
+    else if (ISMATCH(carrier, "retbr") || ISMATCH(carrier, "retla") || ISMATCH(carrier, "tefbr")
+            || ISMATCH(carrier, "timbr")) {
         // These are dual SIM XT1563 devices
         setMsim();
         property_set("ro.product.model", "XT1563");
