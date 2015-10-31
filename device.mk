@@ -77,10 +77,6 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths_florida.xml
 
-# Camera
-PRODUCT_PACKAGES += \
-    camera.msm8916
-
 # Configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/dsi_config.xml:system/etc/data/dsi_config.xml \
