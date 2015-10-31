@@ -167,6 +167,7 @@ BOARD_SEPOLICY_UNION += \
     healthd.te \
     init.te \
     init_shell.te \
+    mediaserver.te \
     mm-qcamerad.te \
     property.te \
     property_contexts \
