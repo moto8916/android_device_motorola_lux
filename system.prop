@@ -115,6 +115,7 @@ persist.sys.isUsbOtgEnabled=true
 # Qualcomm
 com.qc.hardware=true
 debug.qc.hardware=true
+persist.data.qmi.adb_logmask=0
 
 # Radio
 persist.radio.apn_delay=5000
