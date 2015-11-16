@@ -66,6 +66,9 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
+    audio.primary.msm8916 \
+    audio.r_submix.default \
+    audio.usb.default \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
