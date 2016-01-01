@@ -688,7 +688,7 @@
 	</path>
 
 	<path name="voice-speaker-mic">
-		<path name="speaker-mic" />
+		<path name="mic1" />
 	</path>
 
 	<path name="voice-headphones">
